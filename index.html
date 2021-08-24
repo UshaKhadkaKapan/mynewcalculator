@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+ 
+   .main{
+    background-color:green;
+    color:#fff;
+    height:auto;
+    width:270px;
+    padding:20px;
+    border-radius:10px;
+    text-align: center;
+    margin:auto;
+ }
+  .btn {
+    height:auto;
+    width:40px;
+  }
+  </style>
+  
+  </head>
+  
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div class="cointainer">
+      <div class="row">
+        <!--single row-->
+        <div class="col-md-12">
+           <form action="#" name="calculator" class="main">
+             <input type="text" class="display form-control"  id="display" >
+             <br>
+             <input type="button" class="btn btn-info " value="AC" id="clear">
+             
+             <input type="button" class="btn btn-info ml-3 a"  value="000" >
+             <input type="button" class="btn btn-info ml-3 a" value="^" >
+             <input type="button" class="btn btn-info ml-3 a" value="/" > <br><br>
+             <input type="button" class="btn btn-info one" value="7">
+             <input type="button" class="btn btn-info ml-3 a" value="8">
+             <input type="button" class="btn btn-info ml-3 a " value="9">
+             <input type="button" class="btn btn-info ml-3 a" value="*"><br><br>
+             <input type="button" class="btn btn-info one" value="6">
+             <input type="button" class="btn btn-info ml-3 a" value="5">
+             <input type="button" class="btn btn-info ml-3 a " value="4">
+             <input type="button" class="btn btn-info ml-3 a" value="-"><br><br>
+             <input type="button" class="btn btn-info one " value="3">
+             <input type="button" class="btn btn-info ml-3 a" value="2">
+             <input type="button" class="btn btn-info ml-3 a" value="1" id="one">
+             <input type="button" class="btn btn-info ml-3 a" value="+"><br><br>
+             <input type="button" class="btn btn-info one" value="0">
+             <input type="button" class="btn btn-info ml-3 a " value=".">
+             <input type="button" class="btn btn-info ml-3 a" value="00">
+             <input type="button" class="btn btn-info ml-3 calBtn" value="=" >
+             
+
+           </form>
+        </div>
+
+
+      </div>
+
+    </div>
+    <script>
+      
+      $(document).ready(function(){
+        
+       $(".a").click(function(){
+        var value1 =$(this).val();
+        var value2 =$("#display").val();
+        $("#display").val(value2 +value1);
+       });
+
+       $(".one").click(function(){
+        var value1 =$(this).val();
+        var value2 =$("#display").val();
+        $("#display").val(value2 +value1);
+       });
+
+       $("#clear").click(function(){
+       $("#display").val(" ");
+       });
+
+       $(".calBtn").click(function(){
+         var value2 =eval($("#display").val());
+         $("#display").val(value2);
+     
+       });
+      
+      });
+    
+
+     
+
+    
+    </script>
+    
+  </body>
+  
+    </html>
+
+
+
